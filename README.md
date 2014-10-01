@@ -5,7 +5,7 @@ Shortlists specific jobs from all jobs available on eLance based on prespecified
 
 Open **config.php** and enter your Elance and SMTP details. Additionally you can modify the available search criteria. If you don't have an access-token already, generate one, by following the below steps -
 
-1) Open **request.php** and replace *ENTER_YOUR_API_KEY* by your Elance API Key (Elance Client ID) there. Also replace - [http://localhost:8080/callback/index.ph](#)  by URL for index.php as your callback URL.
+1) Open **request.php** and replace *ENTER_YOUR_API_KEY* by your Elance API Key (Elance Client ID) there. Also replace - [http://localhost:8080/callback/index.php](#)  by URL for index.php as your callback URL.
 
 2) Open **index.php** and replace *ENTER_YOUR_API_KEY* by your Elance API Key (first parameter) and *ENTER_YOUR_SECRET_KEY* by Customer Secret code (second parameter).
 
