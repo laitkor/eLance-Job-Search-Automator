@@ -1,6 +1,5 @@
 <?php
-
-$access_token = "ENTER_YOUR_ACCESS_TOKEN_HERE";
+ 
 $base_url = 'http://localhost:8080/elance'; // Base URL of your directory
 
 // Add / Remove Email addresses, that are supposed to receive the job notifications
