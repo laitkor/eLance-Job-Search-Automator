@@ -8,7 +8,7 @@ if (!isset($_GET["code"])) {
  
 $code = $_GET["code"];
 $elance_auth = new ElanceAuthentication();
-$json = $elance_auth->GetAccessToken("ENTER_YOUR_CLIENT_ID", "ENTER_YOUR_SECRET_KEY", $code);
+$json = $elance_auth->GetAccessToken("ENTER_YOUR_API_KEY", "ENTER_YOUR_SECRET_KEY", $code);
  
 print_r( $json );
 //Output code
