@@ -16,11 +16,17 @@ if ( isset($_GET["code"]) )
 {
     $code = $_GET["code"];
     $elance_auth = new ElanceAuthentication();
-    $json = $elance_auth->GetAccessToken("ENTER_YOUR_API_KEY", "ENTER_YOUR_CONSUMER_SECRET_CODE", $code);
+    $json = $elance_auth->GetAccessToken( ELANCE_API_KEY, ELANCE_CONSUMER_SECRET_CODE, $code);
  
-    if( $json->data->access_token )
+    if( isset($json->data->access_token) )
     {
 	$access_token = $json->data->access_token; 
+    }
+    else
+    {
+	fwrite( $fh, date('Y-m-d H:i:s',time())." >> An error occurred while fetching an access token !!!\n" );    
+        fclose( $fh );
+        die();
     }
 }
 else

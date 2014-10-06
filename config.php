@@ -1,6 +1,9 @@
 <?php
- 
-$base_url = 'http://localhost:8080/elance'; // Base URL of your directory
+
+$base_url = 'http://localhost:8080/callback'; // Base URL of the working repository
+
+define( 'ELANCE_API_KEY', 'enter_your_elance_api_key' );
+define( 'ELANCE_CONSUMER_SECRET_CODE', 'elance_consumer_secret_code' );
 
 // Add / Remove Email addresses, that are supposed to receive the job notifications
 $to_email_addresses = array(
@@ -9,15 +12,15 @@ $to_email_addresses = array(
 );
 
 $email_settings = array(
-	"smtp_username" => "ENTER_YOUR_SMTP_USERNAME",
-        "smtp_password" => "ENTER_YOUR_SMTP_PASSWORD",
-        "smtp_host" => "ENTER_YOUT_SMTP_HOST",
+	"smtp_username" => "enter_your_smtp_username",
+        "smtp_password" => "enter_your_smtp_password",
+        "smtp_host" => "enter_your_smtp_host",
         "smtp_port" => "587", // SMTP Port Number
         "email_subject" => "Elance New Job Posts - Laitkor",
-	"from_name" => "ENTER_FROM_NAME",
-	"from_email_address" => "ENTER_FROM_EMAIL_ADDRESS",
-        "reply_to_name" => "ENTER_REPLY_TO_NAME",
-        "reply_to_email_address" => "ENTER_REPLY_TO_EMAIL_ADDRESS"
+	"from_name" => "Administrator",
+	"from_email_address" => "admin@domain.com",
+        "reply_to_name" => "No Reply",
+        "reply_to_email_address" => "noreply@domain.com"
 );
 
 $page = (isset($_GET['page']) && $_GET['page'])?$_GET['page']:1;
